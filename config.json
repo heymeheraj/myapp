@@ -3,43 +3,8 @@
   "baseUrl": "http://192.168.187.49",
   "app_version": "4.0.0",
   "link": "#",
-  "initialUrl": "'http://connectivitycheck.gstatic.com/generate_204'",
-  "loginUrl": "'http://192.168.187.1:8000/index.html'",
-  "flutter_jscode": "function fillVoucherCode() {
-        var inputField = document.querySelector('input[type="text"][placeholder="Voucher Code"]');
-        if (inputField) {
-          inputField.type = 'password';
-          inputField.value = "${widget.voucherCode}";
-          inputField.readOnly = true;
-          inputField.style.height = '36px';
-          inputField.style.textAlign = 'left';
-          inputField.style.backgroundColor = '#f0f0f0';
-          var event = new Event('input', { bubbles: true });
-          inputField.dispatchEvent(event);
-          
-          var loginButton = document.querySelector('.netorkappLoginBtn');
-          if (loginButton) {
-          loginButton.click();
-          }
-        } else {
-          setTimeout(fillVoucherCode, 500);
-        }
-      }
-      fillVoucherCode();",
-    "kotlin_jscode": "function fillVoucherCode() {
-                            var inputField = document.querySelector('input[type="text"][placeholder="Voucher Code"]');
-                            if (inputField) {
-                                inputField.value = "$voucherCode";
-                                var event = new Event('input', { bubbles: true });
-                                inputField.dispatchEvent(event);
-
-                                var loginButton = document.querySelector('.netorkappLoginBtn');
-                                if (loginButton) {
-                                    loginButton.click();
-                                }
-                            } else {
-                                setTimeout(fillVoucherCode, 500);
-                            }
-                        }
-                        fillVoucherCode();"
+  "initialUrl": "http://connectivitycheck.gstatic.com/generate_204",
+  "loginUrl": "http://192.168.187.1:8000/index.html",
+  "flutter_jscode": "function fillVoucherCode(){var inputField=document.querySelector('input[type=\"text\"][placeholder=\"Voucher Code\"]');if(inputField){inputField.type='password';inputField.value=\"${widget.voucherCode}\";inputField.readOnly=true;inputField.style.height='36px';inputField.style.textAlign='left';inputField.style.backgroundColor='#f0f0f0';var event=new Event('input',{bubbles:true});inputField.dispatchEvent(event);var loginButton=document.querySelector('.netorkappLoginBtn');if(loginButton){loginButton.click();}}else{setTimeout(fillVoucherCode,500);}}fillVoucherCode();",
+  "kotlin_jscode": "function fillVoucherCode(){var inputField=document.querySelector('input[type=\"text\"][placeholder=\"Voucher Code\"]');if(inputField){inputField.value=\"$voucherCode\";var event=new Event('input',{bubbles:true});inputField.dispatchEvent(event);var loginButton=document.querySelector('.netorkappLoginBtn');if(loginButton){loginButton.click();}}else{setTimeout(fillVoucherCode,500);}}fillVoucherCode();"
 }
